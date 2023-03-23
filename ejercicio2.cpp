@@ -1,19 +1,10 @@
-#include <iostream>
-#include <stdio.h>
-int main(void)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
 {
     int n;
-    char format[6] = "%.1f";
-    double pi = 3.14159265358979323;
+    double pi = acosl(-1);
     scanf("%d", &n);
-    if (n > 9)
-    {
-        format[3] = (n-10) + '0';
-        format[4] = 'f';
-    }
-    else
-    {
-        format[2] = n+'0';
-    }
-    printf(format, pi);
+    printf("%.*f\n", n, pi);
 }
