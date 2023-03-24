@@ -30,6 +30,12 @@ int main() {
     {
         scanf("%d", &arr[i]);
     }
-    
-    cout << binarySearch(arr, target, n) << endl;
+    if (binarySearch(arr, target, n) < 0)
+    {
+        std::cout << "NO ENCONTRADO.";
+    }
+    else
+    {
+        std::cout << "ENCONTRADO.";
+    }
 }
