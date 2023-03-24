@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int arr[1000005];
+
 int binarySearch(int* array, int target, int size) {
     int left = 0;
     int right = size - 1;
@@ -22,11 +24,12 @@ int binarySearch(int* array, int target, int size) {
 }
 
 int main() {
-    int size = 1000000;
-    int target = 234;
-    int* lista = new int[size];
-    for (int i = 0; i < size; i++) 
-        lista[i] = rand() % size;
-    sort(lista, lista + size);
-    cout << binarySearch(lista, target, size) << endl;
+    int n, target;
+    scanf("%d %d", &n, &target);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    cout << binarySearch(arr, target, n) << endl;
 }
